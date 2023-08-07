@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="author" context="Joel Mayorga">
+    <meta name="description" context="W3 Demo">
+    
+
+    <title>W3 | Multi-Page Sites</title>
+
+    <!--IN DOCUMENT STYLING: Can style to all elements in page-->
+    <style>
+
+        /*We are now writing in css*/
+
+        /*Selection in CSS OR JavaScript: 
+            Selecting an element(s) Within the page to do something
+            them (styling,actions applying buttons or functions)
+
+            Selection can occur through three main ways: 
+
+                *TAG NAME - all tags of this type take the style
+
+                *ID VALUE -
+
+                *Class value
+
+        */
+
+        /* Anatomy of CSS Code Blocks: 
+
+        Selector {
+            property: value;
+        }
+    */
+
+        div {/*applies to all divs in page*/
+        
+        border:1px solid rgb(3,196,255);
+        padding:10px; /*Space added between element content and
+        border*/
+        margin:5px /*Space added outside of element's border*/
+        }
+
+        #wrapper {/*select element by ID: Only */
+        
+        border:1px solid rgb(3, 196, 255);
+        
+        }
+
+        .border {/*select elements by class; only elements with this class vaue are affected [group] */
+        
+            border:2px solid rgb(3,196,255);
+
+        }
+
+        #footer, #header, #nav {
+            text-align: center;
+        }
+
+            
+
+    </style>
+
+</head>
+<!--In line styling: Only applies to this specific element (and its-
+    contents)-->
+<body style="background-color:rgb(255, 255, 255)">
+
+    <div id="wrapper">
+
+        <div id="header" class="border">
+
+            <h1 id="title" class="fancy">Joel Mayorga</h1>
+
+
+
+        </div>
+
+        <div id="nav">
+
+            <a href="index.html">| HOME |</a>
+            <a href="schools.html">| SCHOOLS |</a>
+            <a href="hobbies.html">| HOBBIES |</a>
+            
+
+            <br>
+            <br>
+
+            <!--In page jump link-->
+            <a href="#footer">| Bottom Of Page |</a>
+
+
+
+
+        </div><!--/ #nav-->
+
+
+        <div id="content" class="border">
+
+            <h2 style="text-align: center;"><b>HOBBIES</b></h2>
+            <h3>Cars</h3>
+            <img src="images/m4.jpg" style="width: 500px;">
+
+            <br>
+            <br>
+            <br>
+            <br>
+
+            <h3>Movies</h3>
+            <img src="images/piggy movie.jpg" style="width:500px">
+
+            <br>
+            <br>
+            <br>
+            <br>
+
+            <h3>Collecting Rocks</h3>
+            <img src="images/Rock.jpg" style="width:500px"
+
+
+            
+            
+
+
+
+        </div><!--/ #content-->
+
+
+        <div id="footer">
+
+            <p>&copy;JOEL MAYORGA | SE111.02 | <span class="fancy">202340</span></p>
+            <br>
+            <a href="#header">| Top of the HOME Page |</a>
+
+
+
+        </div><!--/ #footer-->
+
+
+    </div><!--/ #wrapper-->
+
+
+    
+    
+</body>
+</html>
+

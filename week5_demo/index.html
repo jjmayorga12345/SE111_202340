@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="author" content="Joel Mayorga">
+    <meta name="description" content="w5 form demo">
+
+    <title>W5 Demo | Tables & Forms</title>
+
+
+</head>
+<body>
+    <h1>Basic Form Demo</h1>
+<!--Let Browser know we are creating a form-->
+    <form>
+
+        <!--Labels are used to match with the input elements-->
+        <!--'for' attribute connects labels with the input values
+        (matching 'name' and 'id' values in the <input>)-->
+
+        <label for="first Name">First Name: </label>
+
+        <input type="text" name="firstName" id="firstName" >
+
+        <br>
+
+        <label for="last Name">Last Name: </label>
+
+        <input type="text" name="lastName" id="lastName" >
+
+        <br>
+
+        <label for="Age">Age: </label>
+
+        <input type="text" name="Age" id="Age" >
+
+    </form>
+
+    <h2> Form Using a Table</h2>
+
+    <form>
+
+        <!--Table goes immediately in the form!-->
+
+        <table>
+        <th>
+            <!--Table Head <th> for column headers-->
+            <tr>
+                <!--Left column-->
+                <td>
+                    <h2> Questions </h2>
+                </td>
+                <!--Right column-->
+                <td>
+                    <h2>Answers</h2>
+
+                </td>
+            </tr>
+            <!--Table body <tbody> - Required for table content-->
+            <tbody>
+
+                <tr>
+                    <!--Left column-->
+                    <td>
+                        <label for="FirstName2">First Name</label>
+                    </td>
+                    <!--Right column-->
+                    <td>
+                        <input type="text" name="FirstName2" id="FirstName2">
+    
+                    </td>
+
+                    <tr>
+                        <!--Left column-->
+                        <td>
+                            <label for="LastName2">Last Name</label>
+                        </td>
+                        <!--Right column-->
+                        <td>
+                            <input type="text" name="LastName2" id="LastName2" placeholder="Mayorga">
+        
+                        </td>
+                    
+
+                    </td>
+                    <tr>
+                        <!--Left column-->
+                        <td>
+                            <label for="Age">Age</label>
+                        </td>
+                        <!--Right column-->
+                        <td>
+                            <input type="text" name="Age" id="Age">
+        
+                        </td>
+        
+                        
+
+                    
+                </tr>
+
+                <tr>
+                    <!--Left column-->
+                    <td>
+                        <label for="Email">Email</label>
+                    </td>
+                    <!--Right column-->
+                    <td>
+                        <input type="Email" name="Email" id="Email" placeholder="you@email.com">
+    
+                    </td>
+    
+                    
+
+                
+            </tr>
+
+            <tr>
+                <!--Left column-->
+                <td>
+                    <label for="Comments">Comments</label>
+                </td>
+                <!--Right column-->
+                <td>
+                    <textarea name="comments" id="comments" rows="10" cols="20" placeholder="Enter your comment here..." maxlength="10"></textarea>
+
+                </td>
+
+                
+
+            
+        </tr>
+
+        <tr>
+            <!--Left column-->
+            <td>
+                <label for="FaveColor">Pick your favorite color!</label>
+            </td>
+            <!--Right column-->
+            <td>
+                <select name="FaveColor" id="FaveColor"> <!--Create drop-down for choices-->
+
+                    <option value="red">Red</option>
+                    <option value="green">Green</option>
+                    <option value="blue">Blue</option>
+
+
+                </select>
+
+            </td>
+
+            
+
+        
+    </tr>
+
+
+    <tr>
+        <!--Left column-->
+        <td>
+            <label for="Study">Program Of Study</label>
+        </td>
+        <!--Right column-->
+        <td>
+            <input type="Radio" name="study" value="se">SoftWare Engineering
+            <input type="Radio" name="study" value="cyb">Cyber Security
+            <input type="Radio" name="study" value="wd">Web Development
+
+
+        </td>
+
+        
+
+    
+</tr>
+
+
+<tr>
+    <!--Left column-->
+    <td>
+        <label for="Vehicle">Select your vehicle</label>
+    </td>
+    <!--Right column-->
+    <td>
+        <input type="checkbox" name="vehicle1" value="car">SoftWare Engineering <br>
+        <input type="checkbox" name="vehicle2" value="rocinante">The Rocinante <br>
+        <input type="checkbox" name="vehicle3" value="motorcycle">Motorcycle <br>
+
+
+    </td>
+
+    
+
+
+</tr>
+
+<tr>
+    <!--Left column-->
+    <td>
+        <label for="Date">Date</label>
+    </td>
+    <!--Right column-->
+    <td>
+       <input type="date" name="date" id="date">
+
+
+    </td>
+
+    
+
+
+</tr>
+
+<tr>
+    <!--Left column-->
+    <td>
+        
+    </td>
+    <!--Right column-->
+    <td>
+       <input type="submit" value="SUBMIT !">
+
+
+    </td>
+
+    
+
+
+</tr>
+
+
+
+
+            </tbody>
+
+            <!--Table footer <tfoot> - for summations etc-->
+        </th>
+
+
+
+        </table>
+
+    </form>
+    
+</body>
+</html>

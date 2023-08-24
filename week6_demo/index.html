@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+    <meta name="author" content="KT">
+    <meta name="description" content="W6 Demo - Intro to 35">
+    <title>W6 | JS Intro</title>
+
+    <!--In document CSS-->
+    <style>
+
+        /*we are writing CSS*/
+        body {
+            background-color: lightslategray;
+        }
+
+    </style>
+</head>
+<body>
+
+    <!--we should have some sort of HTML in the file/body for base content-->
+    <h1>Week 6 Intro Demo | Javascript</h1>
+
+    <!--In document Javascript - Lives within the html file itself; should always be
+    after any HTML content on the page-->
+    <script>
+        //in here , we write js
+        console.log(`The sum is: ${sum}`)
+
+        //creating a variable -- keyword 'var'
+        var num1 = 10
+        
+        var num2 = 7
+
+        //cannot use num1 or num2 until they have been declared & assigned value [DEFINED]
+        var sum = num1 + num2
+
+        // alert() allows for a pop-up in the browser page to display data to the user
+        //alert() --> pythonts print() / output
+        // the user can see this in page
+        alert("Hello World")
+        // for development - only accesible in console via dev tools
+        console.log("hola universe!")
+
+       
+
+        // `` denotes literal string --> work similar to the .format()
+        // ${VARNAME} inside of `` to display stored value mixed w/string msg
+        console.log(`The sum is: ${sum}`)
+
+        // escape sequences also work inside of strings --> \n [newline]
+
+        //prompt() asks user to enter data - creates a pop-up so works similary to alert() prompt() --> pythons input()
+        var fname = prompt("Enter your name: ")
+        console.log("First Name: ", fname)
+
+        alert(`Hi there ${fname}`)
+
+        var age = number(prompt("Enter your age"))
+        console.log("Age:", age)
+        
+        var dogYears = age * 7
+
+        console.log(`in dog years you are: ${dogYears}yo`)
+
+        //if you run into string/number mixing issues --> cast as a number
+        //num = number(num)     // var num = number(prompt("enter a number"))
+
+        // show numbers rounded to specific decimal places --> .tofixed(#)
+        console.log(`Your age is: ${age.toFixed(2)}`)
+
+    </script>
+</body>
+</html>

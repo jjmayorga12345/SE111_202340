@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="author" content="Joel Mayorga">
+<meta name="description" content="Week 6 homework">
+<link type="text/css" rel="stylesheet" href="style.css">
+<title>Week 6 | JS Intro</title>
+<style>
+body{background-color:rgb(116, 88, 255)}
+</style>
+</head>
+<body>
+<h1><b>Week 6 Calculator</b></h1>
+<script>
+var hourlyWage = Number(prompt("Enter your hourly wage:"));
+var hoursWorked = Number(prompt("Enter hours worked for a two-week period:"));
+var grossPay = hourlyWage * hoursWorked;
+var tax = grossPay * 0.20;
+var netPay = grossPay - tax;
+var formattedGrossPay = grossPay.toFixed(2);
+var formattedTax = tax.toFixed(2);
+var formattedNetPay = netPay.toFixed(2);
+console.log("Gross Pay: $" + formattedGrossPay);
+console.log("Tax: $" + formattedTax);
+console.log("Net Pay: $" + formattedNetPay);
+alert("Gross Pay: $" + formattedGrossPay + "\nTax: $" + formattedTax + "\nNet Pay: $" + formattedNetPay);
+</script>
+
+<img src="images/week6validator.png">
+</body>
+</html>

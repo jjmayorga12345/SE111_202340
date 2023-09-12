@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Joel Mayorga">
+    <meta name="description" content="Objects">
+    <title>Week 8 | Homework Assignment</title>
+</head>
+<body>
+    <h1>List Of People</h1>
+    <p>
+        Please fill in the form and click the submit button.
+    </p>
+    <div>
+        <form>
+            <table>
+                <tr>
+                    <td><label for="first">First Name</label></td>
+                    <td><input id="first" type="text" name="first" placeholder="Ivan"></td>
+                </tr>
+                <tr>
+                    <td><label for="last">Last Name</label></td>
+                    <td><input id="last" type="text" name="last" placeholder="Drago"></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td><input id="button" type="button" value="submit"></td>
+                </tr>
+            </table>
+        </form>
+        <div id="output"></div>
+    </div>
+    
+    <script>
+        var firstNameInput = document.getElementById("first");
+        var lastNameInput = document.getElementById("last");
+        var submitButton = document.getElementById("button");
+        var outputDiv = document.getElementById("output");
+        
+        var people = [];
+        
+        submitButton.addEventListener("click", calcAndDisplay);
+
+        function calcAndDisplay(e) {
+            var person = {
+                first: firstNameInput.value,
+                last: lastNameInput.value
+            };
+            
+            people.push(person);
+            
+            for (let i = 0; i < people.length - 1; i++) {
+                for (let j = 0; j < people.length - 1; j++) {
+                    if (people[j].last > people[j + 1].last) {
+                        let temp = people[j];
+                        people[j] = people[j + 1];
+                        people[j + 1] = temp;
+                    }
+                }
+            }
+            
+            var output = '';
+            
+            for (let i = 0; i < people.length; i++) {
+                for (key in people[i]) {
+                    output += key.toUpperCase() + ': ' + people[i][key] + '<br>';
+                }
+                output += '--------------------------<br>';
+            }
+            
+            outputDiv.innerHTML = output;
+        }
+    </script>
+    <img src="images/w8 validator.png">
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Joel Mayorga">
+    <meta name="description" content="Week 9 ">
+    <title>Week 9</title>
+</head>
+<body>
+    <script type="text/javascript">
+        var characters = [
+            { first: "Jason", last: "Vorhees", credit: "Friday the 13th" },
+            { first: "Freddy", last: "Krueger", credit: "A Nightmare on Elm Street" },
+            { first: "Roger", last: "Rabbit", credit: "Who Framed Roger Rabbit" },
+            { first: "Kevin", last: "McCallister", credit: "Home Alone" },
+            { first: "Godzilla", last: "King of The Monsters", credit: "Godzilla" },
+            { first: "Buzz", last: "Lightyear", credit: "Toy Story" },
+            { first: "Marion", last: "Cobretti", credit: "Cobra" }
+        ]
+
+        var bodyElement = document.body;
+        for (var i = 0; i < characters.length; i++) {
+            var characterDiv = document.createElement("div");
+            characterDiv.setAttribute("id", String(i));
+            characterDiv.setAttribute("class", "border");
+            for (var prop in characters[i]) {
+                if (characters[i].hasOwnProperty(prop)) {
+                    var propElement = document.createElement("p");
+                    var textNode = document.createTextNode(prop + ": " + characters[i][prop]);
+                    propElement.appendChild(textNode);
+                    characterDiv.appendChild(propElement);
+                }
+            }
+            bodyElement.appendChild(characterDiv);
+
+            if (i < characters.length - 1) {
+                var hrElement = document.createElement("hr");
+                bodyElement.appendChild(hrElement);
+            }
+        }
+    </script>
+
+</body>
+</html>
